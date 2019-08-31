@@ -1,4 +1,4 @@
-# Sound-Stupid (Node.js)
+# Sound-Stupid Generator
 To generate a phrase that make you sound stupid. <br>
 It's built on Node.js with Express framework.
 
