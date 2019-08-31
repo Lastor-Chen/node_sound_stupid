@@ -1,0 +1,27 @@
+/* for index page */
+
+.card-img-top {
+  width: 100%;
+  padding-top: 66.67%;
+  overflow: hidden;
+}
+
+.card-img-top.img-engineer {
+  background: url(https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg) center no-repeat;
+  background-size: contain;  
+}
+
+.card-img-top.img-designer {
+  background: url(https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg) center no-repeat;
+  background-size: contain;
+}
+
+.card-img-top.img-entrepreneur {
+  background: url(https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg) center no-repeat;
+  background-size: contain;
+}
+
+.result {
+  height: 6rem;
+  border: 1px solid #a9a9a9;
+}

@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="text-center my-4">你想對誰說幹話？</h1>
+
+  <form action="/" method="POST">
+    <div class="form-row mb-5">
+      {{!-- 批次生成 card from jobs.json --}}
+      {{#each jobs}}
+      <div class="col-4">
+        <div class="card">
+          <div class="card-img-top mx-auto img-{{this.id}}"></div>
+          <div class="card-footer text-center">
+            <div class="custom-control custom-radio d-inline-block">
+              <input type="radio" class="custom-control-input" id="{{this.id}}" name="radio" value="{{this.id}}"
+              {{#if this.checked}}checked{{/if}}>
+              <label class="custom-control-label" for="{{this.id}}">{{this.name}}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+
+    <div class="form-row align-items-top">
+      <div class="pl-1 mr-3">
+        <button class="btn btn-success" type="submit">生成幹話</button>
+      </div>
+      
+      {{!-- 輸出 panel --}}
+      <div class="flex-grow-1 px-2 result">{{{result}}}</div>
+    </div>
+  </form>
+</div>
