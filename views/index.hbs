@@ -7,7 +7,9 @@
       {{#each jobs}}
       <div class="col-4">
         <div class="card">
-          <div class="card-img-top mx-auto img-{{this.id}}"></div>
+          <label class="mb-0" for="{{this.id}}">
+            <div class="card-img-top mx-auto img-{{this.id}}"></div>
+          </label>
           <div class="card-footer text-center">
             <div class="custom-control custom-radio d-inline-block">
               <input type="radio" class="custom-control-input" id="{{this.id}}" name="radio" value="{{this.id}}"
@@ -26,7 +28,13 @@
       </div>
       
       {{!-- 輸出 panel --}}
-      <div class="flex-grow-1 px-2 result">{{{result}}}</div>
+      <div class="flex-grow-1 px-2 result">
+        {{#if result}}
+          {{result}}
+        {{else}}
+          <span class="text-danger">必須選擇一個【 對象 】</span>
+        {{/if}}
+      </div>
     </div>
   </form>
 </div>

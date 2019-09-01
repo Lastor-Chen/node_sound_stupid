@@ -33,7 +33,10 @@ app.get('/', (req, res) => {
     delete item.checked
   })
 
-  res.render('index', { jobs: jobs.results })
+  // 初始狀態，讓 index.hbs 在 result 輸出空白
+  const result = ' '
+
+  res.render('index', { jobs: jobs.results, result })
 })
 
 app.post('/', (req, res) => {

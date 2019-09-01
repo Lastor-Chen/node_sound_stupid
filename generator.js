@@ -17,7 +17,7 @@ function randomNum(max) {
 // 主函式
 function generator(job) {
   // 檢測 job 內容
-  if (!job.id) return '<span class="text-danger">必須選擇一個【 對象 】</span>'
+  if (!job.id) return false
 
   // 取出對應 job.id 的 task
   let task = taskData[job.id]
